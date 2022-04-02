@@ -250,6 +250,8 @@ class App(GUI):
                     self.time_text_label.config(bootstyle=DEFAULT)
 
                 self.total_count -= 1
+                self.time_text_var.set(f'{mm:02d}:{ss:02d}')
+                self.after_id = self.after(1000, self._start)
             else:
                 self._reset()
 
@@ -267,11 +269,10 @@ class App(GUI):
                     self.time_text_label.config(bootstyle=DEFAULT)
 
                 self.start_count += 1
+                self.time_text_var.set(f'{mm:02d}:{ss:02d}')
+                self.after_id = self.after(1000, self._start)
             else:
                 self._reset()
-
-        self.time_text_var.set(f'{mm:02d}:{ss:02d}')
-        self.after_id = self.after(1000, self._start)
 
     def _pause(self):
         self.after_cancel(self.after_id)
