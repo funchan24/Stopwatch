@@ -1,0 +1,8 @@
+Nuitka==0.7.6
+Pillow==8.2.0
+pynput==1.6.8
+simpleaudio==1.0.4
+six==1.16.0
+ttkbootstrap==1.7.4
+yapf==0.32.0
+[0m
