@@ -42,6 +42,8 @@ class GUI(Window):
                          overrideredirect=overrideredirect,
                          alpha=alpha)
 
+        localization.initialize_localities()
+
         self.withdraw()
         self.set_global_font(size=10)
 

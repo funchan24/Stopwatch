@@ -17,8 +17,4 @@
 
 ### 截图
 
-* 计时界面
-<img src="res/p1.png" width="150">
-
-* 设置界面
-<img src="res/p2.png" width="150">
+<img src="res/screenshot.gif" width="266">

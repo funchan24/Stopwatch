@@ -129,7 +129,7 @@ def main():
     _, venv_python_path, venv_pip_path = get_venv_path()
     set_pip(venv_pip_path, venv_python_path)
 
-    run(f'{venv_pip_path} freeze >requirements.txt',
+    run(f'{venv_pip_path} freeze --exclude Nuitka --exclude yapf >requirements.txt',
         shell=True,
         stdout=PIPE,
         stdin=PIPE)

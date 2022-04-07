@@ -7,6 +7,7 @@
 
 import re
 import time
+import platform
 
 import simpleaudio as sa
 from pynput import keyboard, mouse
@@ -285,7 +286,10 @@ class App(GUI):
 
 
 def main():
-    iconphoto = str(res_dir / 'main_32.gif')
+    if platform.system() == 'Windows':
+        iconphoto = str(res_dir / 'main_32.png')
+    if platform.system() == 'Linux':
+        iconphoto = str(res_dir / 'main_256.gif')
     app = App(title='计时器',
               base_size=10,
               iconphoto=iconphoto,
